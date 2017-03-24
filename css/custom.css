@@ -235,6 +235,7 @@
   right: 0;
   overflow: hidden;
   height: 100vh;
+  /*width: 1280px;*/
 }
 
 .menu_item_lent{
@@ -245,10 +246,29 @@
 .fullWindow_item_lent{
   position: relative;
   transition: all 1.7s cubic-bezier(1, 0, 0, 1);
+
+}
+.fullWindow_item_lent div{
+  width: 100vw;
+  height: 100vh;
 }
 
+.fullWindow_item_lent div:first-child{
+  background: url(../images_adil/ferdi.jpg) no-repeat;
+  background-position: right;
+  background-size: contain;
+  opacity: .4;
+}
+.fullWindow_item_lent div:last-child{
+  background: url(../images_adil/businessman.jpg) no-repeat;
+  background-position: right;
+  background-size: cover;
+  opacity: .4;
+}
 .fullWindow_item_lent img{
   opacity: 0.5;
+  width: 100%;
+  height: 300px;
 }
 
 #adil .container .innerLeftContainer{

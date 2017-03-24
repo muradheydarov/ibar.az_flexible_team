@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>ibarAz</title>
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/png" href="images_adil/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
 </head>
@@ -15,8 +16,8 @@
             <div class="fullWindow">
               <div class="fullWindow_item">
                 <div class="fullWindow_item_lent">
-                  <div><img src="images_adil/ferdi.jpg" alt=""></div>
-                  <div><img src="images_adil/businessman.jpg" alt=""></div>
+                  <div id="fullWindow_item_lent_first"></div>
+                  <div id="fullWindow_item_lent_second"></div>
                 </div>
               </div>
                 <div class="fullWindow_clip adil_clip">
@@ -92,7 +93,7 @@
                     <div class="innerContainer">
                         <div class="above">
                             <div class="searcher">
-                                <input type="text">
+                                <input type="text" onblur="deactive()">
                                 <span class="searchPlaceholder">Sizə necə kömək edə bilərik?</span>
                                 <a class="searchIcon"></a>
                                 <a class="menu">

@@ -15,27 +15,15 @@ l = document.querySelector('#adil .menu .l');
         searchPlaceholder.style.top = '-27px';
         middle.style.display = 'flex';
     });
-    header.addEventListener('click', function() {
-        searchPlaceholder.style.fontSize = '1.8em';
-        searchPlaceholder.style.top = '0';
-        middle.style.display = 'none';
-    });
-    footer.addEventListener('click', function() {
-        searchPlaceholder.style.fontSize = '1.8em';
-        searchPlaceholder.style.top = '0';
-        middle.style.display = 'none';
-    });
-    innerLeftContainer.addEventListener('click', function() {
-        searchPlaceholder.style.fontSize = '1.8em';
-        searchPlaceholder.style.top = '0';
-        middle.style.display = 'none';
-    });
-    innerRightContainer.addEventListener('click', function() {
-        searchPlaceholder.style.fontSize = '1.8em';
-        searchPlaceholder.style.top = '0';
-        middle.style.display = 'none';
-    });
+
 })();
+function deactive() {
+  if (input.value.length == 0) {
+    searchPlaceholder.style.fontSize = '1.8em';
+    searchPlaceholder.style.top = '0';
+    middle.style.display = 'none';
+  }
+}
 menu.addEventListener('mouseover', function() {
     u.style.top = '32px';
     l.style.top = '52px';
@@ -47,6 +35,7 @@ menu.addEventListener('mouseout', function() {
 
 // murad
 var backImg=["images_adil/ferdi.jpg","images_adil/businessman.jpg"]
+var sliderMain=["images_adil/ferdi.jpg"]
 var ferdi = document.querySelector('.ferdi');
 var korporativ=document.querySelector('.korporativ');
 var adil=document.querySelector('.fullWindow_clip');
@@ -57,6 +46,7 @@ var ferdi_content=document.querySelector('.ferdi_content');
 var korporativ_content=document.querySelector('.korporativ_content');
 var menu=document.querySelector('.menu');
 var fullWindow_lent=document.querySelector('.fullWindow_item_lent');
+var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
 
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
@@ -87,7 +77,7 @@ if (adil.classList.contains("active")){
       }, 500);
     }, 100);
 
-  fullWindow_lent.style.top="-700px";
+  fullWindow_lent.style.top= "-"+(height)+"px";
   innerContainer.style.position="relative";
 }
 else {
@@ -95,7 +85,7 @@ else {
       innerContainer.style.top="-500px";
       setTimeout(function(){
         adil.classList.add("active");
-        fullWindow_lent.style.top="-700px";
+        fullWindow_lent.style.top= "-"+(height)+"px";
         setTimeout(function(){
           korporativ_content.style.opacity="2";
         },100);
