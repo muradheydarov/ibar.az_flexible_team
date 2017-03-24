@@ -12,7 +12,9 @@
     font-family: 't';
     src: url('../font/latest_fonts/t-webfont.ttf');
 }
-
+body{
+  overflow: hidden;
+}
 #adil_body {
     background-color: #1b3e85;
     width: 100vw;
@@ -693,4 +695,71 @@
     background: url('../images_adil/call.png') no-repeat center center;
     background-size: 100%;
     margin-left: 20px;
+}
+.contactUs {
+    position: absolute;
+    top: 0;
+    right: -360px;
+    width: 360px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: -95px 0px 150px rgba(0,0,0,.25);
+    z-index: 150;
+    transition: all .5s ease-out;
+}
+
+.contactUs .usTitle {
+    padding: 0 35px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    font-family: 'l', sans-serif;
+    font-size: 1.4em;
+    color: white;
+}
+
+.contactUs .usTitle p {
+    padding: 26px 0;
+}
+.contactUs .usTitle a{
+    width: 75px;
+    height: 75px;
+    background: url('../images_adil/close.svg') center center no-repeat;
+    background-size: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.contactUs .usBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images_adil/contact_side.jpg') bottom right no-repeat;
+    background-size: cover;
+}
+
+.contactUs .usList {
+    padding-top: 14px;
+    width: 360px;
+    font-family: 't', sans-serif;
+    font-size: 1.28em;
+}
+
+.contactUs .usList ul li {
+    width: 360px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    transition: all .4s ease;
+}
+.contactUs .usList ul li:hover{
+    background: rgba(255, 255, 255, .1);
+}
+.contactUs .usList ul li a {
+    color: white;
+    text-decoration: none;
+    width: 290px;
+    padding: 13px 35px;
+    cursor: pointer;
 }

@@ -50,6 +50,9 @@ var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
 var slider=document.querySelector('.slider');
 var slider_array=document.querySelector('.below_item ul').children;
 var below_item_div=document.querySelector('.below_item div');
+var contact_btn=document.querySelector('.contact_btn');
+var contactUs=document.querySelector('.contactUs');
+var close_x=document.querySelector('.close_x');
 
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
@@ -126,10 +129,18 @@ for(i=0;i<slider_array.length;i++){
         slider.style.backgroundImage="url("+sliderMain[val]+")";
         e.target.style.backgroundColor="transparent";
         e.target.classList.add("dot_active");
-        console.log(val);
     })
 }
 
+contact_btn.addEventListener("click",function () {
+  // contactUs.style.display="block";
+  contactUs.style.right="0";
+  console.log(contactUs.style.right.length);
+})
+close_x.addEventListener("click",function() {
+  contactUs.style.right="-360px";
+  // contactUs.style.display="none";
+})
 // slider_1.addEventListener("click",function() {
 //   for (var i = 0; i < sliderMain.length; i++) {
 //     slider_array[i].classList.remove("dot_active")
