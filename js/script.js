@@ -35,7 +35,7 @@ menu.addEventListener('mouseout', function() {
 
 // murad
 var backImg=["images_adil/ferdi.jpg","images_adil/businessman.jpg"]
-var sliderMain=["images_adil/ferdi.jpg"]
+var sliderMain=["images_adil/novQaz1.jpg","images_adil/novQaz2.jpg","images_adil/emekKrediti.jpg"]
 var ferdi = document.querySelector('.ferdi');
 var korporativ=document.querySelector('.korporativ');
 var adil=document.querySelector('.fullWindow_clip');
@@ -47,6 +47,9 @@ var korporativ_content=document.querySelector('.korporativ_content');
 var menu=document.querySelector('.menu');
 var fullWindow_lent=document.querySelector('.fullWindow_item_lent');
 var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
+var slider=document.querySelector('.slider');
+var slider_array=document.querySelector('.below_item ul').children;
+var below_item_div=document.querySelector('.below_item div');
 
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
@@ -105,8 +108,49 @@ close_active.addEventListener("click",function () {
   setTimeout(function(){
       adil.classList.remove("active");
     }, 100);
-})
+});
 
-menu.addEventListener("click",function () {
 
-})
+for(i=0;i<slider_array.length;i++){
+    slider_array[i].addEventListener("click",function(e){
+      val=e.target.getAttribute("data-value");
+      for (var i = 0; i < sliderMain.length; i++) {
+          slider_array[i].classList.remove("dot_active")
+          slider_array[i].style.backgroundColor="white";
+        }
+          if (val === "2") {
+            below_item_div.style.display="block";
+          } else {
+            below_item_div.style.display="";
+          }
+        slider.style.backgroundImage="url("+sliderMain[val]+")";
+        e.target.style.backgroundColor="transparent";
+        e.target.classList.add("dot_active");
+        console.log(val);
+    })
+}
+
+// slider_1.addEventListener("click",function() {
+//   for (var i = 0; i < sliderMain.length; i++) {
+//     slider_array[i].classList.remove("dot_active")
+//   }
+//   slider.style.backgroundImage="url("+sliderMain[0]+")";
+//   slider_1.style.backgroundColor="transparent";
+//   slider_1.classList.add("dot_active");
+// })
+// slider_2.addEventListener("click",function() {
+//   for (var i = 0; i < sliderMain.length; i++) {
+//     slider_array[i].classList.remove("dot_active")
+//   }
+//   slider.style.backgroundImage="url("+sliderMain[1]+")";
+//   slider_2.style.backgroundColor="transparent";
+//   slider_2.classList.add("dot_active");
+// })
+// slider_3.addEventListener("click",function() {
+//   for (var i = 0; i < sliderMain.length; i++) {
+//     slider_array[i].classList.remove("dot_active");
+//   }
+//   slider.style.backgroundImage="url("+sliderMain[2]+")";
+//   slider_3.style.backgroundColor="transparent";
+//   slider_3.classList.add("dot_active");
+// })
