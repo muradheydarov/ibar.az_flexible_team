@@ -16,15 +16,26 @@ body{
   overflow: hidden;
 }
 #adil_body {
-    background-color: #1b3e85;
+    background-color: #2e56a6;
     width: 100vw;
     height: 100vh;
+}
+
+.adil_body_curtain{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
 }
 
 #adil {
     width: 100vw;
     height: 100vh;
-    background-color: #2e56a6;
+    background-color: #1b3e85;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
+}
+.main_body_active{
+  transform: scale(.9) translate(-2%, 0);
 }
 
 .adil_clip{
@@ -51,7 +62,7 @@ body{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #2e56a6;
+  background-color: #1b3e85;
 }
 
 .fullWindow_clip img{
@@ -705,7 +716,7 @@ body{
     box-sizing: border-box;
     box-shadow: -95px 0px 150px rgba(0,0,0,.25);
     z-index: 150;
-    transition: all .5s ease-out;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
 
 .contactUs .usTitle {
@@ -762,4 +773,12 @@ body{
     width: 290px;
     padding: 13px 35px;
     cursor: pointer;
+}
+.close_x{
+  cursor: pointer;
+  transform: rotate(0);
+  transition: all .5s cubic-bezier(1, 0, 0, 1);
+}
+.close_x:hover {
+  transform: rotate(180deg);
 }

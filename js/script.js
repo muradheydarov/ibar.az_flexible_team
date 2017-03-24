@@ -53,6 +53,8 @@ var below_item_div=document.querySelector('.below_item div');
 var contact_btn=document.querySelector('.contact_btn');
 var contactUs=document.querySelector('.contactUs');
 var close_x=document.querySelector('.close_x');
+var main_body=document.querySelector('#adil');
+var curtain=document.querySelector('.adil_body_curtain');
 
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
@@ -133,14 +135,30 @@ for(i=0;i<slider_array.length;i++){
 }
 
 contact_btn.addEventListener("click",function () {
-  // contactUs.style.display="block";
-  contactUs.style.right="0";
-  console.log(contactUs.style.right.length);
+  setTimeout(function(){
+      main_body.classList.add("main_body_active");
+      setTimeout(function(){
+          contactUs.style.right="0";
+        }, 200);
+    }, 100);
 })
 close_x.addEventListener("click",function() {
-  contactUs.style.right="-360px";
-  // contactUs.style.display="none";
+  setTimeout(function(){
+      contactUs.style.right="-360px";
+      setTimeout(function(){
+          main_body.classList.remove("main_body_active");
+        }, 200);
+    }, 100);
 })
+curtain.addEventListener("click",function() {
+  setTimeout(function(){
+      contactUs.style.right="-360px";
+      setTimeout(function(){
+          main_body.classList.remove("main_body_active");
+        }, 200);
+    }, 100);
+});
+
 // slider_1.addEventListener("click",function() {
 //   for (var i = 0; i < sliderMain.length; i++) {
 //     slider_array[i].classList.remove("dot_active")
