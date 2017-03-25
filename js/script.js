@@ -1,13 +1,8 @@
 //ADIL'S SCRIPT STARTED
-header = document.querySelector('#adil .header');
-container = document.querySelector('#adil .container');
-footer = document.querySelector('#adil .footer');
 searchPlaceholder = document.querySelector('#adil .searchPlaceholder');
 input = document.querySelector('#adil .searcher input');
 middle = document.querySelector('#adil .middle');
 menu = document.querySelector('#adil .menu');
-innerLeftContainer = document.querySelector('#adil .innerLeftContainer');
-innerRightContainer = document.querySelector('#adil .innerRightContainer');
 u = document.querySelector('#adil .menu .u');
 l = document.querySelector('#adil .menu .l');
 (function() {
@@ -66,39 +61,23 @@ goBack.addEventListener('click',function() {
 });
 //MURAD'S SCRIPT STARTED
 
-var backImg=["images_adil/ferdi.jpg","images_adil/businessman.jpg"]
-var sliderMain=["images_adil/novQaz1.jpg","images_adil/novQaz2.jpg","images_adil/emekKrediti.jpg"]
-var slider_array=document.querySelector('.below_item ul').children;
-var ferdi = document.querySelector('.ferdi');
-var korporativ=document.querySelector('.korporativ');
-var adil=document.querySelector('.fullWindow_clip');
-var elaqe = document.querySelector('.elaqe');
-var innerContainer=document.querySelector('.innerContainer');
-var close_active=document.querySelector('.close_active');
 var ferdi_content=document.querySelector('.ferdi_content');
-var korporativ_content=document.querySelector('.korporativ_content');
-var menu=document.querySelector('.menu');
+var adil=document.querySelector('.fullWindow_clip');
 var fullWindow_lent=document.querySelector('.fullWindow_item_lent');
+var innerContainer=document.querySelector('.innerContainer');
+var korporativ_content=document.querySelector('.korporativ_content');
 var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
-var slider=document.querySelector('.slider');
-var below_item_div=document.querySelector('.below_item div');
-var contact_btn=document.querySelector('.contact_btn');
-var contactUs=document.querySelector('.contactUs');
-var close_x=document.querySelector('.close_x');
-var main_body=document.querySelector('#adil');
-var curtain=document.querySelector('.adil_body_curtain');
-var usBg=document.querySelector('.usBg').clientWidth;
-
+var ferdi = document.querySelector('.ferdi');
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
   korporativ_content.style.opacity="0";
   },10);
 setTimeout(function(){
-    innerContainer.style.top="-500px";
+    innerContainer.style.top=-height+"px";
     setTimeout(function(){
       fullWindow_lent.style.top="0px";
       innerContainer.style.position="relative";
-      innerContainer.style.top="-500px";
+      innerContainer.style.top=-height+"px";
       setTimeout(function(){
         adil.classList.add("active");
       setTimeout(function(){
@@ -110,6 +89,7 @@ setTimeout(function(){
 
 })
 
+var korporativ=document.querySelector('.korporativ');
 korporativ.addEventListener("click",function() {
 if (adil.classList.contains("active")){
   setTimeout(function(){
@@ -119,15 +99,15 @@ if (adil.classList.contains("active")){
       }, 500);
     }, 100);
 
-  fullWindow_lent.style.top= "-"+(height)+"px";
+  fullWindow_lent.style.top= -height+"px";
   innerContainer.style.position="relative";
 }
 else {
   setTimeout(function(){
-      innerContainer.style.top="-500px";
+      innerContainer.style.top=-height+"px";
       setTimeout(function(){
         adil.classList.add("active");
-        fullWindow_lent.style.top= "-"+(height)+"px";
+        fullWindow_lent.style.top= -height+"px";
         setTimeout(function(){
           korporativ_content.style.opacity="2";
         },300);
@@ -135,6 +115,8 @@ else {
     }, 100);
   }
 })
+
+var close_active=document.querySelector('.close_active');
 
 close_active.addEventListener("click",function () {
   setTimeout(function(){
@@ -145,10 +127,14 @@ close_active.addEventListener("click",function () {
       }, 500);
   },100);
   setTimeout(function(){
-      innerContainer.style.top="30px";
+      innerContainer.style.top="0px";
     }, 1000);
 });
 
+var sliderMain=["images_adil/novQaz1.jpg","images_adil/novQaz2.jpg","images_adil/emekKrediti.jpg"];
+var slider_array=document.querySelector('.below_item ul').children;
+var below_item_div=document.querySelector('.below_item div');
+var slider=document.querySelector('.slider');
 val=0;
 for(i=0;i<slider_array.length;i++){
     slider_array[i].addEventListener("click",function(e){
@@ -188,6 +174,9 @@ function slider_auto() {
 }
 setInterval(slider_auto,2000);
 
+var contactUs=document.querySelector('.contactUs');
+var main_body=document.querySelector('#adil');
+var contact_btn=document.querySelector('.contact_btn');
 contact_btn.addEventListener("click",function () {
   setTimeout(function(){
       main_body.classList.add("main_body_active");
@@ -196,6 +185,10 @@ contact_btn.addEventListener("click",function () {
         }, 200);
     }, 100);
 })
+
+var close_x=document.querySelector('.close_x');
+var curtain=document.querySelector('.adil_body_curtain');
+var usBg=document.querySelector('.usBg').clientWidth;
 
 close_x.addEventListener("click",delete_x)
 curtain.addEventListener("click",delete_x)
@@ -228,14 +221,14 @@ function currency_auto() {
     plus+=30;
     console.log(plus);
 }
-setInterval(currency_auto,1000);
+setInterval(currency_auto,2000);
 
 // gunel <<<
 
 // REHIM'S SCRIPT STARTED
+var menu=document.querySelector('.menu');
 var adile=document.querySelector("#adil");
 var menuItem=document.querySelector(".menu_item");
-var menu=document.querySelector(".menu");
 
 menu.addEventListener("click",function(){
   setTimeout(function(){

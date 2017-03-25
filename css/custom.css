@@ -1052,5 +1052,5 @@ body{
 .commerce>div div{
   height: 30px;
   position: relative;
-  transition: 1s;
+  transition: all .3s cubic-bezier(1, 0, 0, 1);
 }
