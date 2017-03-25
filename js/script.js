@@ -31,6 +31,7 @@ menu.addEventListener('mouseout', function() {
 
 usTitle=document.querySelector('.usTitle');
 onBg=document.querySelector('.onBg');
+onBg_width=document.querySelector('.onBg').clientWidth;
 title=document.querySelector('.usTitle p');
 goBack=document.querySelector('.goBack');
 writeUs=document.querySelector('.writeUs');
@@ -51,7 +52,7 @@ goBack.addEventListener('click',function() {
     function deleteDefault(event){
         event.preventDefault();
     }
-    diver.style.right="-320px";
+    diver.style.right=-onBg_width+"px";
     setTimeout(function() {
         goBack.style.display='none';
     },200);
@@ -203,7 +204,7 @@ function delete_x() {
     }, 100);
 }
 // gunel >>>
-
+ var commerce_array=document.querySelector('.commerce').children;
  var money_lent = document.querySelector('.money_lent');
  var buy_lent = document.querySelector('.buy_lent');
  var sell_lent = document.querySelector('.sell_lent');
@@ -213,7 +214,7 @@ function delete_x() {
 
 plus=0;
 function currency_auto() {
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < commerce_array.length; i++) {
       setTimeout(function(){
           money_lent.style.top=-plus+"px";
           setTimeout(function(){
@@ -253,7 +254,7 @@ close_x_second.addEventListener("click",delete_x_second);
 
 function delete_x_second() {
   setTimeout(function(){
-      menuItem.style.right=-menuItem.clientWidth+"px";
+      menuItem.style.right=-(menuItem.clientWidth+50)+"px";
       setTimeout(function(){
            main_body.classList.remove("main_body_active");
         }, 200);
