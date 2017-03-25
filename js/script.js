@@ -1,3 +1,4 @@
+//ADIL'S SCRIPT STARTED
 header = document.querySelector('#adil .header');
 container = document.querySelector('#adil .container');
 footer = document.querySelector('#adil .footer');
@@ -33,7 +34,38 @@ menu.addEventListener('mouseout', function() {
     l.style.top = '49px';
 });
 
-// murad
+usTitle=document.querySelector('.usTitle');
+onBg=document.querySelector('.onBg');
+title=document.querySelector('.usTitle p');
+goBack=document.querySelector('.goBack');
+writeUs=document.querySelector('.writeUs');
+diver=document.querySelector('.diver');
+writeUs.addEventListener('click',function() {
+    function deleteDefault(event){
+        event.preventDefault();
+    }
+    diver.style.right="40px";
+    setTimeout(function() {
+        goBack.style.display='block';
+        usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .5)';
+    },300);
+    title.style.left='32px';
+    onBg.style.backgroundColor='#2e56a6';
+});
+goBack.addEventListener('click',function() {
+    function deleteDefault(event){
+        event.preventDefault();
+    }
+    diver.style.right="-320px";
+    setTimeout(function() {
+        goBack.style.display='none';
+    },200);
+    title.style.left='0px';
+    onBg.style.backgroundColor='transparent';
+    usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .1)';
+});
+//MURAD'S SCRIPT STARTED
+
 var backImg=["images_adil/ferdi.jpg","images_adil/businessman.jpg"]
 var sliderMain=["images_adil/novQaz1.jpg","images_adil/novQaz2.jpg","images_adil/emekKrediti.jpg"]
 var slider_array=document.querySelector('.below_item ul').children;
@@ -176,14 +208,34 @@ function delete_x() {
         }, 200);
     }, 100);
 }
+// gunel >>>
 
-// MENU_ITEM HISSE
+ var money_lent = document.querySelector('.money_lent');
+ var buy_lent = document.querySelector('.buy_lent');
+ var sell_lent = document.querySelector('sell_lent');
+ var money = document.querySelector('.money');
+ var buy = document.querySelector('.buy');
+ var sell = document.querySelector('.sell');
+
+plus=0;
+function currency_auto() {
+    for (var i = 0; i < 4; i++) {
+      money_lent.style.top=-plus+"px";
+    }
+    if (plus==90) {
+      plus=-30;
+    }
+    plus+=30;
+    console.log(plus);
+}
+setInterval(currency_auto,1000);
+
+// gunel <<<
+
+// REHIM'S SCRIPT STARTED
 var adile=document.querySelector("#adil");
 var menuItem=document.querySelector(".menu_item");
 var menu=document.querySelector(".menu");
-console.log(menu);
-
-menuItem.style.right=-menuItem.clientWidth+"px";
 
 menu.addEventListener("click",function(){
   setTimeout(function(){
@@ -212,10 +264,10 @@ korporative.addEventListener("click",function(){
   menuLenta.style.right=menuItem.clientWidth+"px";
 })
  var feridFirst=document.querySelector('.menu_item .head a:first-child');
-  console.log(feridFirst);
  feridFirst.addEventListener("click",function(){
     menuLenta.style.right=0+"px";
 })
+
 
 // var about=document.querySelector('.menu_item  .about');
 // var korporative=document.querySelector('.menu_item .head a:last-child');
@@ -252,33 +304,3 @@ korporative.addEventListener("click",function(){
 //   slider_3.style.backgroundColor="transparent";
 //   slider_3.classList.add("dot_active");
 // })
-usTitle=document.querySelector('.usTitle');
-onBg=document.querySelector('.onBg');
-title=document.querySelector('.usTitle p');
-goBack=document.querySelector('.goBack');
-writeUs=document.querySelector('.writeUs');
-diver=document.querySelector('.diver');
-writeUs.addEventListener('click',function() {
-    function deleteDefault(event){
-        event.preventDefault();
-    }
-    diver.style.right="40px";
-    setTimeout(function() {
-        goBack.style.display='block';
-        usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .5)';
-    },300);
-    title.style.left='32px';
-    onBg.style.backgroundColor='#2e56a6';
-});
-goBack.addEventListener('click',function() {
-    function deleteDefault(event){
-        event.preventDefault();
-    }
-    diver.style.right="-320px";
-    setTimeout(function() {
-        goBack.style.display='none';
-    },200);
-    title.style.left='0px';
-    onBg.style.backgroundColor='transparent';
-    usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .1)';
-});

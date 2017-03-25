@@ -231,7 +231,7 @@ body{
   font-size: 23px;
 }
 .menu_item{
-  right: 0;
+  right: -750px;
   position: absolute;
   width: 750px;
   z-index: 500;
@@ -250,7 +250,7 @@ body{
     position: relative;
 }
 .menu_item .head a{
-    color: #fff;    
+    color: #fff;
     font-size: 1.6em;
     text-decoration: none;
     position: absolute;
@@ -1045,4 +1045,12 @@ body{
 }
 .close_x:hover {
   transform: rotate(180deg);
+}
+.commerce>div{
+  overflow: hidden;
+}
+.commerce>div div{
+  height: 30px;
+  position: relative;
+  transition: 1s;
 }
