@@ -710,18 +710,19 @@ body{
 .contactUs {
     position: absolute;
     top: 0;
-    right: -360px;
+    right: -560px;
     width: 360px;
     height: 100%;
     box-sizing: border-box;
-    box-shadow: -95px 0px 150px rgba(0,0,0,.25);
-    z-index: 150;
+    box-shadow: -95px 0px 150px rgba(0, 0, 0, .25);
+    overflow: hidden;
+    z-index: 300;
     transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
 
 .contactUs .usTitle {
     padding: 0 35px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
     font-family: 'l', sans-serif;
     font-size: 1.4em;
     color: white;
@@ -729,8 +730,23 @@ body{
 
 .contactUs .usTitle p {
     padding: 26px 0;
+    position: relative;
+    left: 0px;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
-.contactUs .usTitle a{
+.contactUs .usTitle .goBack{
+    width: 32px;
+    opacity: .5;
+    height: 31px;
+    background: url('../images_adil/backer.png') left center no-repeat;
+    background-size: 12px;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
+    position: absolute;
+    top: 21px;
+    right: 293px;
+    display: none;
+}
+.contactUs .usTitle a {
     width: 75px;
     height: 75px;
     background: url('../images_adil/close.svg') center center no-repeat;
@@ -740,6 +756,7 @@ body{
     top: 0;
     right: 10px;
 }
+
 .contactUs .usBg {
     width: 100%;
     height: 100%;
@@ -749,30 +766,163 @@ body{
     background: url('../images_adil/contact_side.jpg') bottom right no-repeat;
     background-size: cover;
 }
+.contactUs .usBg .onBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    opacity: .8;
+    background-size: cover;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
+}
+.contactUs .usBg .diver {
+    display: flex;
+    position: absolute;
+    overflow-x: hidden;
+    right: -320px;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
+}
 
 .contactUs .usList {
     padding-top: 14px;
     width: 360px;
     font-family: 't', sans-serif;
     font-size: 1.28em;
+    margin-right: 35px;
 }
 
 .contactUs .usList ul li {
-    width: 360px;
+    width: 100%;
     height: 53px;
     display: flex;
     align-items: center;
     transition: all .4s ease;
 }
-.contactUs .usList ul li:hover{
+
+.contactUs .usList ul li:hover {
     background: rgba(255, 255, 255, .1);
 }
+
 .contactUs .usList ul li a {
     color: white;
     text-decoration: none;
     width: 290px;
     padding: 13px 35px;
     cursor: pointer;
+}
+
+.contactUs .usWrite {
+    margin-top: 40px;
+    width: 285px;
+    color: white;
+}
+
+.contactUs .usWrite .writer>p {
+    font-family: 't', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 36px;
+}
+
+.contactUs .usWrite form .firstf {
+    margin-bottom: 27px;
+}
+
+.contactUs .usWrite form .firstf>p {
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.contactUs .usWrite form .firstf input {
+    font-family: 't', sans-serif;
+    background: none;
+    font-weight: 100;
+    border: none;
+    width: 100%;
+    padding: 8px 0 12px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .8) !important;
+    outline: 0;
+    font-size: 1.19em;
+}
+
+.contactUs .usWrite form .firstf select {
+    color: white !important;
+    font-size: 1.19em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    font-family: 't', sans-serif;
+    width: 100%;
+    padding: 7px 0 11px 0;
+    outline: 0;
+}
+
+.contactUs .usWrite form .firstf select option {
+    color: black;
+}
+
+.contactUs .usWrite form .firstf input::placeholder {
+    color: rgba(255, 255, 255, .5) !important;
+    /*font-size: 1.35em;*/
+}
+
+.contactUs .usWrite form .secondf>p {
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.contactUs .usWrite form .secondf .switch {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    margin-top: 13px;
+}
+
+.contactUs .usWrite form .secondf .switch p {
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    font-weight: 500;
+    padding: 13px 57px;
+    padding-bottom: 14px;
+}
+
+.contactUs .usWrite form .secondf .switch p:first-child {
+    background: rgba(255, 255, 255, .2);
+}
+
+.contactUs .usWrite form .secondf {
+    margin-bottom: 27px;
+}
+
+.contactUs .usWrite form .thirdf {
+    margin-bottom: 27px;
+}
+
+.contactUs .usWrite form .thirdf>p {
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.contactUs .usWrite form .thirdf textarea {
+    height: 140px;
+    resize: none;
+    width: 98%;
+    font-size: 1.3em;
+    font-family: 't', sans-serif;
+    outline: 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 .close_x{
   cursor: pointer;

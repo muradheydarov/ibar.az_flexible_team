@@ -212,3 +212,33 @@ function delete_x() {
 //   slider_3.style.backgroundColor="transparent";
 //   slider_3.classList.add("dot_active");
 // })
+usTitle=document.querySelector('.usTitle');
+onBg=document.querySelector('.onBg');
+title=document.querySelector('.usTitle p');
+goBack=document.querySelector('.goBack');
+writeUs=document.querySelector('.writeUs');
+diver=document.querySelector('.diver');
+writeUs.addEventListener('click',function() {
+    function deleteDefault(event){
+        event.preventDefault();
+    }
+    diver.style.right="40px";
+    setTimeout(function() {
+        goBack.style.display='block';
+        usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .5)';
+    },300);
+    title.style.left='32px';
+    onBg.style.backgroundColor='#2e56a6';
+});
+goBack.addEventListener('click',function() {
+    function deleteDefault(event){
+        event.preventDefault();
+    }
+    diver.style.right="-320px";
+    setTimeout(function() {
+        goBack.style.display='none';
+    },200);
+    title.style.left='0px';
+    onBg.style.backgroundColor='transparent';
+    usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .1)';
+});
