@@ -177,6 +177,46 @@ function delete_x() {
     }, 100);
 }
 
+// MENU_ITEM HISSE
+var adile=document.querySelector("#adil");
+var menuItem=document.querySelector(".menu_item");
+var menu=document.querySelector(".menu");
+console.log(menu);
+
+menuItem.style.right=-menuItem.clientWidth+"px";
+
+menu.addEventListener("click",function(){
+  setTimeout(function(){
+      main_body.classList.add("main_body_active");
+      setTimeout(function(){
+          menuItem.style.right="0";
+        }, 200);
+    }, 100);
+})
+
+curtain.addEventListener("click",function() {
+  setTimeout(function(){
+      menuItem.style.right=-menuItem.clientWidth+"px";
+      setTimeout(function(){
+           main_body.classList.remove("main_body_active");
+        }, 200);
+    }, 100);
+});
+
+var menuLenta=document.querySelector('.menu_item .menu_item_lent');
+
+var about=document.querySelector('.menu_item  .about');
+var korporative=document.querySelector('.menu_item .head a:last-child');
+
+korporative.addEventListener("click",function(){
+  menuLenta.style.right=menuItem.clientWidth+"px";
+})
+ var feridFirst=document.querySelector('.menu_item .head a:first-child');
+  console.log(feridFirst);
+ feridFirst.addEventListener("click",function(){
+    menuLenta.style.right=0+"px";
+})
+
 // var about=document.querySelector('.menu_item  .about');
 // var korporative=document.querySelector('.menu_item .head a:last-child');
 //
