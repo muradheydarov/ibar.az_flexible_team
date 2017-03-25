@@ -36,6 +36,7 @@ menu.addEventListener('mouseout', function() {
 // murad
 var backImg=["images_adil/ferdi.jpg","images_adil/businessman.jpg"]
 var sliderMain=["images_adil/novQaz1.jpg","images_adil/novQaz2.jpg","images_adil/emekKrediti.jpg"]
+var slider_array=document.querySelector('.below_item ul').children;
 var ferdi = document.querySelector('.ferdi');
 var korporativ=document.querySelector('.korporativ');
 var adil=document.querySelector('.fullWindow_clip');
@@ -48,13 +49,13 @@ var menu=document.querySelector('.menu');
 var fullWindow_lent=document.querySelector('.fullWindow_item_lent');
 var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
 var slider=document.querySelector('.slider');
-var slider_array=document.querySelector('.below_item ul').children;
 var below_item_div=document.querySelector('.below_item div');
 var contact_btn=document.querySelector('.contact_btn');
 var contactUs=document.querySelector('.contactUs');
 var close_x=document.querySelector('.close_x');
 var main_body=document.querySelector('#adil');
 var curtain=document.querySelector('.adil_body_curtain');
+var usBg=document.querySelector('.usBg').clientWidth;
 
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
@@ -67,13 +68,14 @@ setTimeout(function(){
       innerContainer.style.position="relative";
       innerContainer.style.top="-500px";
       setTimeout(function(){
+        adil.classList.add("active");
+      setTimeout(function(){
         ferdi_content.style.opacity="2";
-        setTimeout(function(){
-          adil.classList.add("active");
-        },200);
-      }, 500);
-    }, 100);
+      }, 800);
+    },500);
+   }, 100);
   }, 100);
+
 })
 
 korporativ.addEventListener("click",function() {
@@ -96,7 +98,7 @@ else {
         fullWindow_lent.style.top= "-"+(height)+"px";
         setTimeout(function(){
           korporativ_content.style.opacity="2";
-        },100);
+        },300);
       }, 800);
     }, 100);
   }
@@ -106,16 +108,16 @@ close_active.addEventListener("click",function () {
   setTimeout(function(){
     ferdi_content.style.opacity="0";
     korporativ_content.style.opacity="0";
-  },10);
+    setTimeout(function(){
+        adil.classList.remove("active");
+      }, 500);
+  },100);
   setTimeout(function(){
       innerContainer.style.top="30px";
     }, 1000);
-  setTimeout(function(){
-      adil.classList.remove("active");
-    }, 100);
 });
 
-
+val=0;
 for(i=0;i<slider_array.length;i++){
     slider_array[i].addEventListener("click",function(e){
       val=e.target.getAttribute("data-value");
@@ -134,6 +136,26 @@ for(i=0;i<slider_array.length;i++){
     })
 }
 
+function slider_auto() {
+  for (var i = 0; i < slider_array.length; i++) {
+    slider_array[i].classList.remove("dot_active");
+    slider_array[i].style.backgroundColor="white";
+  }
+  slider_array[val].classList.add("dot_active");
+  slider_array[val].style.backgroundColor="transparent";
+  slider.style.backgroundImage="url("+sliderMain[val]+")";
+  if (val==2) {
+    below_item_div.style.display="block";
+  }else{
+    below_item_div.style.display="";
+  }
+  val++;
+  if (val==sliderMain.length) {
+    val=0;
+  }
+}
+setInterval(slider_auto,2000);
+
 contact_btn.addEventListener("click",function () {
   setTimeout(function(){
       main_body.classList.add("main_body_active");
@@ -142,23 +164,30 @@ contact_btn.addEventListener("click",function () {
         }, 200);
     }, 100);
 })
-close_x.addEventListener("click",function() {
-  setTimeout(function(){
-      contactUs.style.right="-360px";
-      setTimeout(function(){
-          main_body.classList.remove("main_body_active");
-        }, 200);
-    }, 100);
-})
-curtain.addEventListener("click",function() {
-  setTimeout(function(){
-      contactUs.style.right="-360px";
-      setTimeout(function(){
-          main_body.classList.remove("main_body_active");
-        }, 200);
-    }, 100);
-});
 
+close_x.addEventListener("click",delete_x)
+curtain.addEventListener("click",delete_x)
+
+function delete_x() {
+  setTimeout(function(){
+      contactUs.style.right=-usBg + "px";
+      setTimeout(function(){
+          main_body.classList.remove("main_body_active");
+        }, 200);
+    }, 100);
+}
+
+// var about=document.querySelector('.menu_item  .about');
+// var korporative=document.querySelector('.menu_item .head a:last-child');
+//
+// korporative.addEventListener("click",function(){
+//   menuLenta.style.right=menuItem.clientWidth+"px";
+// })
+//  var feridFirst=document.querySelector('.menu_item .head a:first-child');
+//   console.log(feridFirst);
+//  feridFirst.addEventListener("click",function(){
+//     menuLenta.style.right=0+"px";
+// })
 // slider_1.addEventListener("click",function() {
 //   for (var i = 0; i < sliderMain.length; i++) {
 //     slider_array[i].classList.remove("dot_active")
