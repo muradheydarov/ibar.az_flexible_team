@@ -59,6 +59,7 @@ goBack.addEventListener('click',function() {
     onBg.style.backgroundColor='transparent';
     usTitle.style.borderBottom='1px solid rgba(255, 255, 255, .1)';
 });
+
 //MURAD'S SCRIPT STARTED
 
 var ferdi_content=document.querySelector('.ferdi_content');
@@ -205,7 +206,7 @@ function delete_x() {
 
  var money_lent = document.querySelector('.money_lent');
  var buy_lent = document.querySelector('.buy_lent');
- var sell_lent = document.querySelector('sell_lent');
+ var sell_lent = document.querySelector('.sell_lent');
  var money = document.querySelector('.money');
  var buy = document.querySelector('.buy');
  var sell = document.querySelector('.sell');
@@ -213,7 +214,15 @@ function delete_x() {
 plus=0;
 function currency_auto() {
     for (var i = 0; i < 4; i++) {
-      money_lent.style.top=-plus+"px";
+      setTimeout(function(){
+          money_lent.style.top=-plus+"px";
+          setTimeout(function(){
+              buy_lent.style.top=-plus+"px";
+              setTimeout(function(){
+                  sell_lent.style.top=-plus+"px";
+                }, 100);
+            }, 100);
+        }, 100);
     }
     if (plus==90) {
       plus=-30;
@@ -221,15 +230,15 @@ function currency_auto() {
     plus+=30;
     console.log(plus);
 }
-setInterval(currency_auto,2000);
+setInterval(currency_auto,3000);
 
 // gunel <<<
 
-// REHIM'S SCRIPT STARTED
-var menu=document.querySelector('.menu');
+//RAHİM'S SCRIPT STARTED
 var adile=document.querySelector("#adil");
 var menuItem=document.querySelector(".menu_item");
-
+var menu=document.querySelector(".menu");
+var close_x_second=document.querySelector('.close_x_second');
 menu.addEventListener("click",function(){
   setTimeout(function(){
       main_body.classList.add("main_body_active");
@@ -237,63 +246,28 @@ menu.addEventListener("click",function(){
           menuItem.style.right="0";
         }, 200);
     }, 100);
-})
+});
 
-curtain.addEventListener("click",function() {
+curtain.addEventListener("click",delete_x_second);
+close_x_second.addEventListener("click",delete_x_second);
+
+function delete_x_second() {
   setTimeout(function(){
       menuItem.style.right=-menuItem.clientWidth+"px";
       setTimeout(function(){
            main_body.classList.remove("main_body_active");
         }, 200);
     }, 100);
-});
+}
 
 var menuLenta=document.querySelector('.menu_item .menu_item_lent');
-
 var about=document.querySelector('.menu_item  .about');
-var korporative=document.querySelector('.menu_item .head a:last-child');
+var korporative=document.querySelector('.menu_item .head .heady ul li:last-child a');
 
 korporative.addEventListener("click",function(){
-  menuLenta.style.right=menuItem.clientWidth+"px";
+menuLenta.style.right=menuItem.clientWidth+"px";
 })
  var feridFirst=document.querySelector('.menu_item .head a:first-child');
  feridFirst.addEventListener("click",function(){
-    menuLenta.style.right=0+"px";
+ menuLenta.style.right=0+"px";
 })
-
-
-// var about=document.querySelector('.menu_item  .about');
-// var korporative=document.querySelector('.menu_item .head a:last-child');
-//
-// korporative.addEventListener("click",function(){
-//   menuLenta.style.right=menuItem.clientWidth+"px";
-// })
-//  var feridFirst=document.querySelector('.menu_item .head a:first-child');
-//   console.log(feridFirst);
-//  feridFirst.addEventListener("click",function(){
-//     menuLenta.style.right=0+"px";
-// })
-// slider_1.addEventListener("click",function() {
-//   for (var i = 0; i < sliderMain.length; i++) {
-//     slider_array[i].classList.remove("dot_active")
-//   }
-//   slider.style.backgroundImage="url("+sliderMain[0]+")";
-//   slider_1.style.backgroundColor="transparent";
-//   slider_1.classList.add("dot_active");
-// })
-// slider_2.addEventListener("click",function() {
-//   for (var i = 0; i < sliderMain.length; i++) {
-//     slider_array[i].classList.remove("dot_active")
-//   }
-//   slider.style.backgroundImage="url("+sliderMain[1]+")";
-//   slider_2.style.backgroundColor="transparent";
-//   slider_2.classList.add("dot_active");
-// })
-// slider_3.addEventListener("click",function() {
-//   for (var i = 0; i < sliderMain.length; i++) {
-//     slider_array[i].classList.remove("dot_active");
-//   }
-//   slider.style.backgroundImage="url("+sliderMain[2]+")";
-//   slider_3.style.backgroundColor="transparent";
-//   slider_3.classList.add("dot_active");
-// })

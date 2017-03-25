@@ -12,20 +12,22 @@
     font-family: 't';
     src: url('../font/latest_fonts/t-webfont.ttf');
 }
-body{
-  overflow: hidden;
+
+body {
+    overflow: hidden;
 }
+
 #adil_body {
-    background-color: #2e56a6;
+    background-color: #1b3e85;
     width: 100vw;
     height: 100vh;
 }
 
-.adil_body_curtain{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 1;
+.adil_body_curtain {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
 }
 
 #adil {
@@ -34,17 +36,18 @@ body{
     background-color: #1b3e85;
     transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
-.main_body_active{
-  transform: scale(.9) translate(-2%, 0);
+
+.main_body_active {
+    transform: scale(.9) translate(-2%, 0);
 }
 
-.adil_clip{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 50%);
-  transition: all 1.7s cubic-bezier(1, 0, 0, 1);
+.adil_clip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 50%);
+    transition: all 1.7s cubic-bezier(1, 0, 0, 1);
 }
 
-.active{
-  clip-path: polygon(0 0, 70% 0, 33% 100%, 20% 100%, 0 100%, 0 56%);
+.active {
+    clip-path: polygon(0 0, 70% 0, 33% 100%, 20% 100%, 0 100%, 0 56%);
 }
 
 #adil .fullWindow {
@@ -58,17 +61,18 @@ body{
     background-image: url('../images_adil/glow.png');
 }
 
-.fullWindow_clip{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #1b3e85;
+.fullWindow_clip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2e56a6;
 }
 
-.fullWindow_clip img{
-  width: 100%;
-  height: 99.6%;
+.fullWindow_clip img {
+    width: 100%;
+    height: 99.6%;
 }
+
 #adil .header {
     padding: 40px 50px;
     box-sizing: border-box;
@@ -76,11 +80,13 @@ body{
     width: 100vw;
     z-index: 100;
 }
-#adil .header .innerHeader{
+
+#adil .header .innerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 #adil .header a {
     text-decoration: none;
     color: white;
@@ -179,237 +185,299 @@ body{
     align-items: center;
 }
 
-.ferdi_content{
-  width: 400px;
-  position: relative;
-  top: 180px;
-  font-family: 't';
-  margin-left: 50px;
-  opacity: 0;
-  transition: 1s ease-in-out;
-}
-.ferdi_content div{
-  display: flex;
-  padding-top: 20px;
-}
-.ferdi_content div ul:first-child{
-  margin-right: 30px;
-}
-.ferdi_content h1{
-  font-size: 4.0em;
-  font-weight: 400;
-  padding-bottom: 20px;
-}
-.ferdi_content li{
-  padding: 10px 0;
-  font-size: 25px;
+.ferdi_content {
+    width: 400px;
+    position: relative;
+    top: 180px;
+    font-family: 't';
+    margin-left: 50px;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
-.korporativ_content{
-  width: 400px;
-  position: relative;
-  top: -100px;
-  font-family: 't';
-  margin-left: 50px;
-  opacity: 0;
-  transition: 1s ease-in-out;
+.ferdi_content div {
+    display: flex;
+    padding-top: 20px;
 }
-.korporativ_content div{
-  display: flex;
-  padding-top: 20px;
+
+.ferdi_content div ul:first-child {
+    margin-right: 30px;
 }
-.korporativ_content div ul:first-child{
-  margin-right: 30px;
+
+.ferdi_content h1 {
+    font-size: 4.0em;
+    font-weight: 400;
+    padding-bottom: 20px;
 }
-.korporativ_content h1{
-  font-size: 4.0em;
-  font-weight: 400;
-  padding-bottom: 20px;
+
+.ferdi_content li {
+    padding: 10px 0;
+    font-size: 25px;
 }
-.korporativ_content li{
-  padding: 10px 0;
-  font-size: 23px;
-}
-.menu_item{
-  right: -750px;
-  position: absolute;
-  width: 750px;
-  z-index: 500;
-  background: url(../images_adil/all_site.jpg) bottom right no-repeat #2e56a6;
-  height: 100vh;
-  background-size: cover;
-  overflow: hidden;
-  transition: .4s;
-  font-family: 'l', sans-serif;
-  top:0;
-}
-.menu_item .head{
-    width: 100%;
-    height: 75px;
-    border-bottom: 1px solid white;
+
+.korporativ_content {
+    width: 400px;
     position: relative;
+    top: -100px;
+    font-family: 't';
+    margin-left: 50px;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
-.menu_item .head a{
-    color: #fff;
-    font-size: 1.6em;
-    text-decoration: none;
+
+.korporativ_content div {
+    display: flex;
+    padding-top: 20px;
+}
+
+.korporativ_content div ul:first-child {
+    margin-right: 30px;
+}
+
+.korporativ_content h1 {
+    font-size: 4.0em;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.korporativ_content li {
+    padding: 10px 0;
+    font-size: 23px;
+}
+
+.menu_item {
+    right: -950px;
     position: absolute;
-    padding: 21px 12px;
-    left: 50px;
+    width: 750px;
+    z-index: 500;
+    background: url(../images_adil/all_site.jpg) bottom right no-repeat #2e56a6;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    transition: .4s;
+    top: 0;
+    box-shadow: -95px 0px 150px rgba(0, 0, 0, .25);
 }
-.menu_item .head a:last-child{
-    margin-left: 100px;
-}
-.menu_item .head a:hover{
-    border-bottom: 2px solid;
-}
-.menu_item .head a:focus{
-    border-bottom: 2px solid;
-}
-.menu_item .search{
+
+.menu_item .head {
     width: 100%;
-    height: 61px;
+    height: 74px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    position: relative;
+    font-family: 'l', sans-serif;
 }
-.menu_item .search input{
-    width: 600px;
-    height: 61px;
+
+.menu_item .heady {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.menu_item .head ul li {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 26px 0px 23px 0px;
+}
+
+.menu_item .head ul li:hover {
+    border-bottom: 3px solid #94B8FF;
+}
+
+.menu_item .head ul li a {
+    color: #fff;
+    font-size: 1.4em;
+    text-decoration: none;
+    padding: 26px 10px 21px 10px;
+}
+
+.menu_item .head ul li a:focus {
+    border-bottom: 3px solid #94B8FF;
+}
+.menu_item .head .heady>a {
+    width: 75px;
+    height: 75px;
+    background: url('../images_adil/close.svg') center center no-repeat;
+    background-size: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 23px;
+}
+.menu_item .search input {
+    width: 650px;
+    height: 57px;
     background: transparent;
     outline: none;
-    border:none;
-    margin-left: 70px;
-    border-bottom: 1px solid #fff;
-    font-size: 2em;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, .1);
+    font-family: 't', sans-serif;
+    font-size: 1.55em;
     color: #fff;
+    background: url('../images_adil/search.svg') right center no-repeat;
 }
-.menu_item  .about{
-    width: 600px;
-    margin-left: 70px;
-    margin-top: 25px;
-}
-.menu_item  .elektron{
-    width:670px;
-    height: 220px;
 
+.menu_item .search input::placeholder {
+    color: rgba(255, 255, 255, .9);
 }
-.menu_item  .elektron div{
-    width: 220px;
-    height: 100%;
-    float: left;
-}
-.menu_item  .elektron div h3{
-    color:#fff;
-    margin:0;
-}
-.menu_item  .elektron div ul{
-    padding: 0;
-    margin:0;
-    list-style: none;
-}
-.menu_item  .elektron div li{
-    margin-top: 7px;
-}
-.menu_item  .elektron div a{
-    color:#fff;
-    text-decoration: none;
-}
-.menu_item  .elektron div a:hover{
-    text-decoration: underline;
-}
-.menu_item .aboutSecond{
-    width: 600px;
-    margin-right: 35px;
-    margin-top: 35px;
-}
-.menu_item .aboutSecond .hesablar{
-    width:600px;
-    height: 144px;
-}
-.menu_item .aboutSecond .hesablar div{
-    width: 200px;
-    height: 100%;
-    float: left;
-}
-.menu_item .aboutSecond .hesablar div h3{
-    color:#fff;
-    margin:0;
-}
-.menu_item .aboutSecond .hesablar div ul{
-    padding: 0;
-    margin:0;
-    list-style: none;
-}
-.menu_item .aboutSecond .hesablar div li{
-    margin-top: 7px;
-}
-.menu_item .aboutSecond .hesablar div a{
-    color:#fff;
-    text-decoration: none;
-}
-.menu_item .aboutSecond .hesablar div a:hover{
-    text-decoration: underline;
-}
-.menu_item_lent{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+
+.menu_item_lent {
     width: 1500px;
     height: 100vh;
-    right: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     transition: .4s;
-}
-.fullWindow_item{
-  position: absolute;
-  right: 0;
-  overflow: hidden;
-  height: 100vh;
-  /*width: 1280px;*/
+    right:0;
 }
 
-.menu_item_lent{
-  width: 1500px;
-  height: 100vh;
+.menu_item .about {
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 34px;
 }
 
-.fullWindow_item_lent{
-  position: relative;
-  transition: all 1.7s cubic-bezier(1, 0, 0, 1);
-
+.menu_item .elektron {
+    height: 220px;
+    display: flex;
+    justify-content: flex-start;
 }
-.fullWindow_item_lent div{
-  width: 100vw;
-  height: 100vh;
+.menu_item .elektron:first-child{
+    height: 244px;
 }
-
-.fullWindow_item_lent div:first-child{
-  background: url(../images_adil/ferdi.jpg) no-repeat;
-  background-position: right;
-  background-size: contain;
-  opacity: .4;
+.menu_item .elektron:nth-child(2){
+    height: 194px;
 }
-.fullWindow_item_lent div:last-child{
-  background: url(../images_adil/businessman.jpg) no-repeat;
-  background-position: bottom right;
-  opacity: .4;
+.menu_item .elektron:nth-child(2) div:last-child{
+    margin-top: 20px;
 }
-.fullWindow_item_lent img{
-  opacity: 0.5;
-  width: 100%;
-  height: 300px;
+.menu_item .elektron:nth-child(3) div:last-child{
+    margin-top: 20px;
+}
+.menu_item .elektron div {
+    width: 217px;
+    height: 100%;
 }
 
-#adil .container .innerLeftContainer{
+.menu_item .elektron div h3 a {
+    color: #fff;
+    font-family: 't', sans-serif;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.menu_item .elektron div ul li{
+    margin:9px 0;
+}
+.menu_item .elektron div ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    transition: all .5s ease;
+}
+
+.menu_item .elektron div h3 a:hover{
+    border-bottom: 1px solid white;
+}
+.menu_item .elektron div ul li a:hover {
+    border-bottom: 1px solid rgba(255,255,255,.7);
+}
+
+.menu_item .aboutSecond {
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 34px;
+}
+
+.menu_item .hesablar {
+    height: 220px;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu_item .hesablar:first-child{
+    height: 144px;
+}
+.menu_item .hesablar:nth-child(2){
+    height: 169px;
+}
+.menu_item .hesablar div {
+    width: 217px;
+    height: 100%;
+}
+
+.menu_item .hesablar div h3 a {
+    color: #fff;
+    font-family: 't', sans-serif;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.menu_item .hesablar div ul li{
+    margin:9px 0;
+}
+.menu_item .hesablar div ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    font-family: 'l', sans-serif;
+    font-size: .9em;
+    transition: all .5s ease;
+}
+
+.menu_item .hesablar div h3 a:hover{
+    border-bottom: 1px solid white;
+}
+.menu_item .hesablar div ul li a:hover {
+    border-bottom: 1px solid rgba(255,255,255,.7);
+}
+.fullWindow_item {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    height: 100vh;
+    /*width: 1280px;*/
+}
+.fullWindow_item_lent {
+    position: relative;
+    transition: all 1.7s cubic-bezier(1, 0, 0, 1);
+}
+
+.fullWindow_item_lent div {
+    width: 100vw;
+    height: 100vh;
+}
+
+.fullWindow_item_lent div:first-child {
+    background: url(../images_adil/ferdi.jpg) no-repeat;
+    background-position: right;
+    background-size: contain;
+    opacity: .4;
+}
+
+.fullWindow_item_lent div:last-child {
+    background: url(../images_adil/businessman.jpg) no-repeat;
+    background-position: bottom right;
+    opacity: .4;
+}
+
+.fullWindow_item_lent img {
+    opacity: 0.5;
+    width: 100%;
+    height: 300px;
+}
+
+#adil .container .innerLeftContainer {
     width: calc((100vw - 605px)/2);
     height: 100%;
 }
-#adil .container .innerRightContainer{
+
+#adil .container .innerRightContainer {
     width: calc((100vw - 605px)/2);
     height: 100%;
 }
-#adil .container .innerContainer{
+
+#adil .container .innerContainer {
     position: relative;
     top: 30px;
     transition: all 1.7s cubic-bezier(1, 0, 0, 1);
 }
+
 #adil .container .above {
     display: flex;
     justify-content: center;
@@ -458,7 +526,7 @@ body{
     top: 0;
 }
 
-#adil .container .above .searcher .menu{
+#adil .container .above .searcher .menu {
     background-size: 33px;
     width: 45px;
     height: 85px;
@@ -480,6 +548,7 @@ body{
     opacity: .4;
     transition: all .3s ease;
 }
+
 #adil .container .above .searcher .menu .m {
     width: 25px;
     height: 1px;
@@ -502,9 +571,10 @@ body{
     opacity: .4;
     transition: all .3s ease;
 }
-#adil .container .middle{
+
+#adil .container .middle {
     display: flex;
-    font-family: 'l',sans-serif;
+    font-family: 'l', sans-serif;
     font-size: .7em;
     font-weight: 100;
     display: none;
@@ -512,19 +582,23 @@ body{
     margin-bottom: 28px;
     transition: all .3 ease;
 }
-#adil .container .middle ul{
+
+#adil .container .middle ul {
     margin-left: 5px;
 }
-#adil .container .middle ul li{
+
+#adil .container .middle ul li {
     display: inline-block;
 }
-#adil .container .middle ul li a{
+
+#adil .container .middle ul li a {
     text-decoration: none;
     color: white;
     background: rgba(255, 255, 255, .15);
     padding: 5px 20px;
     border-radius: 100px;
 }
+
 #adil .container .below {
     position: relative;
     left: 0;
@@ -545,31 +619,32 @@ body{
     z-index: 56;
 }
 
-#adil .container .below_item{
+#adil .container .below_item {
     padding: 20px 20px;
     position: absolute;
     height: 144px;
     z-index: 10;
 }
-#adil .container .below .below_item div{
-  display: none;
+
+#adil .container .below .below_item div {
+    display: none;
 }
 
-#adil .container .below .below_item b{
-    font-family: 't',sans-serif;
+#adil .container .below .below_item b {
+    font-family: 't', sans-serif;
     font-size: 1.1em;
     font-weight: 700;
 }
 
-#adil .container .below .below_item p{
-    font-family: 't',sans-serif;
+#adil .container .below .below_item p {
+    font-family: 't', sans-serif;
     font-size: .7em;
     letter-spacing: .5px;
     font-weight: 700;
     padding-top: 10px;
 }
 
-#adil .container .below .below_item ul{
+#adil .container .below .below_item ul {
     position: absolute;
     left: 20px;
     bottom: 18px;
@@ -577,7 +652,8 @@ body{
     display: flex;
     align-items: center;
 }
-#adil .container .below .below_item ul li{
+
+#adil .container .below .below_item ul li {
     width: 8px;
     height: 8px;
     border-radius: 100%;
@@ -585,16 +661,18 @@ body{
     cursor: pointer;
     background-color: white;
     z-index: 60;
+}
 
+#adil .container .below .below_item ul li.dot_active {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100%;
 }
-#adil .container .below .below_item ul li.dot_active{
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 100%;
-}
-#adil .container .below .slider div ul li:first-child{
+
+#adil .container .below .slider div ul li:first-child {
     margin-left: 0;
 }
+
 #adil .container .below .payment {
     width: 184px;
     height: 184px;
@@ -613,30 +691,33 @@ body{
     z-index: 200;
 }
 
-#adil .container .below .payment:hover{
+#adil .container .below .payment:hover {
     transform: scale(1.05);
     transition: .85s cubic-bezier(.52, .01, .16, 1);
 }
 
-#adil .container .below .payment div{
+#adil .container .below .payment div {
     padding: 20px 20px;
     position: relative;
     height: 144px;
 }
-#adil .container .below .payment div b{
-    font-family: 't',sans-serif;
+
+#adil .container .below .payment div b {
+    font-family: 't', sans-serif;
     font-size: 1.1em;
     font-weight: 700;
 }
-#adil .container .below .payment div u{
+
+#adil .container .below .payment div u {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-family: 't',sans-serif;
+    font-family: 't', sans-serif;
     font-size: .6em;
     opacity: .8;
     font-weight: 500;
 }
+
 #adil .footer {
     position: fixed;
     bottom: 0;
@@ -757,7 +838,7 @@ body{
     align-items: center;
 }
 
-#adil .footer .innerFooter .third .one .upperOne ul{
+#adil .footer .innerFooter .third .one .upperOne ul {
     display: flex;
     justify-content: space-between;
 }
@@ -776,9 +857,11 @@ body{
     height: 20px;
     margin-left: 7px;
 }
-#adil .footer .innerFooter .third .one .lowerOne ul li:first-child{
+
+#adil .footer .innerFooter .third .one .lowerOne ul li:first-child {
     margin-left: 0;
 }
+
 #adil .footer .innerFooter .third .one .lowerOne ul li a {
     width: 20px;
     height: 20px;
@@ -821,10 +904,11 @@ body{
     background-size: 100%;
     margin-left: 20px;
 }
+
 .contactUs {
     position: absolute;
     top: 0;
-    right: -560px;
+    right: -950px;
     width: 360px;
     height: 100%;
     box-sizing: border-box;
@@ -848,7 +932,8 @@ body{
     left: 0px;
     transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
-.contactUs .usTitle .goBack{
+
+.contactUs .usTitle .goBack {
     width: 32px;
     opacity: .5;
     height: 31px;
@@ -860,6 +945,7 @@ body{
     right: 293px;
     display: none;
 }
+
 .contactUs .usTitle a {
     width: 75px;
     height: 75px;
@@ -880,7 +966,8 @@ body{
     background: url('../images_adil/contact_side.jpg') bottom right no-repeat;
     background-size: cover;
 }
-.contactUs .usBg .onBg{
+
+.contactUs .usBg .onBg {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -891,6 +978,7 @@ body{
     background-size: cover;
     transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
+
 .contactUs .usBg .diver {
     display: flex;
     position: absolute;
@@ -1038,14 +1126,17 @@ body{
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
-.close_x{
-  cursor: pointer;
-  transform: rotate(0);
-  transition: all .5s cubic-bezier(1, 0, 0, 1);
+
+.close_x {
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
 }
+
 .close_x:hover {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
+
 .commerce>div{
   overflow: hidden;
 }
