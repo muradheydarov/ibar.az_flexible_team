@@ -203,7 +203,7 @@ function delete_x() {
         }, 200);
     }, 100);
 }
-// gunel >>>
+
  var commerce_array=document.querySelector('.commerce').children;
  var money_lent = document.querySelector('.money_lent');
  var buy_lent = document.querySelector('.buy_lent');
@@ -233,7 +233,20 @@ function currency_auto() {
 }
 setInterval(currency_auto,3000);
 
-// gunel <<<
+var allmenu=document.querySelector('.allMenu');
+var menu_item_responsive=document.querySelector('.menu_item_responsive');
+menu_item_responsive.style.opacity="0";
+menu_item_responsive.style.right=-(menu_item_responsive.clientWidth)+"px";
+allmenu.addEventListener("click",function() {
+  menu_item_responsive.style.opacity="1";
+  menu_item_responsive.style.right="0px";
+})
+
+var close_menu=document.querySelector('.menu_item_responsive_close');
+close_menu.addEventListener("click",function() {
+  menu_item_responsive.style.opacity="0";
+  menu_item_responsive.style.right=-(menu_item_responsive.clientWidth)+"px";
+})
 
 //RAHİM'S SCRIPT STARTED
 var adile=document.querySelector("#adil");
@@ -254,7 +267,7 @@ close_x_second.addEventListener("click",delete_x_second);
 
 function delete_x_second() {
   setTimeout(function(){
-      menuItem.style.right=-(menuItem.clientWidth+300)+"px";
+      menuItem.style.right=-(menuItem.clientWidth)+"px";
       setTimeout(function(){
            main_body.classList.remove("main_body_active");
         }, 200);
