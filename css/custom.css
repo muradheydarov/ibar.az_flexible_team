@@ -155,7 +155,7 @@ body {
 }
 
 #adil .header .bank .commerce div {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #adil .header .bank .commerce div:last-child {
@@ -176,7 +176,15 @@ body {
 #adil .header .bank .internetBank:hover {
     background: rgba(255, 255, 255, .10);
 }
-
+#adil .header .allMenu{
+    position: absolute;
+    right: 0;
+    background: url('../images_adil/menu.svg') center center no-repeat;
+    width: 75px;
+    display: none;
+    height: 85px;
+    top:0;
+}
 #adil .container {
     height: calc(100vh - 125px);
     color: white;
@@ -292,6 +300,7 @@ body {
 .menu_item .head ul li a:focus {
     border-bottom: 3px solid #94B8FF;
 }
+
 .menu_item .head .heady>a {
     width: 75px;
     height: 75px;
@@ -302,6 +311,7 @@ body {
     top: 0;
     right: 23px;
 }
+
 .menu_item .search input {
     width: 650px;
     height: 57px;
@@ -326,7 +336,7 @@ body {
     display: flex;
     justify-content: space-between;
     transition: .4s;
-    right:0;
+    right: 0;
 }
 
 .menu_item .about {
@@ -340,18 +350,23 @@ body {
     display: flex;
     justify-content: flex-start;
 }
-.menu_item .elektron:first-child{
+
+.menu_item .elektron:first-child {
     height: 244px;
 }
-.menu_item .elektron:nth-child(2){
+
+.menu_item .elektron:nth-child(2) {
     height: 194px;
 }
-.menu_item .elektron:nth-child(2) div:last-child{
+
+.menu_item .elektron:nth-child(2) div:last-child {
     margin-top: 20px;
 }
-.menu_item .elektron:nth-child(3) div:last-child{
+
+.menu_item .elektron:nth-child(3) div:last-child {
     margin-top: 20px;
 }
+
 .menu_item .elektron div {
     width: 217px;
     height: 100%;
@@ -363,9 +378,11 @@ body {
     text-decoration: none;
     font-size: 1.3em;
 }
-.menu_item .elektron div ul li{
-    margin:9px 0;
+
+.menu_item .elektron div ul li {
+    margin: 9px 0;
 }
+
 .menu_item .elektron div ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, .7);
@@ -374,11 +391,12 @@ body {
     transition: all .5s ease;
 }
 
-.menu_item .elektron div h3 a:hover{
+.menu_item .elektron div h3 a:hover {
     border-bottom: 1px solid white;
 }
+
 .menu_item .elektron div ul li a:hover {
-    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
 }
 
 .menu_item .aboutSecond {
@@ -392,12 +410,15 @@ body {
     display: flex;
     justify-content: flex-start;
 }
-.menu_item .hesablar:first-child{
+
+.menu_item .hesablar:first-child {
     height: 144px;
 }
-.menu_item .hesablar:nth-child(2){
+
+.menu_item .hesablar:nth-child(2) {
     height: 169px;
 }
+
 .menu_item .hesablar div {
     width: 217px;
     height: 100%;
@@ -409,9 +430,11 @@ body {
     text-decoration: none;
     font-size: 1.3em;
 }
-.menu_item .hesablar div ul li{
-    margin:9px 0;
+
+.menu_item .hesablar div ul li {
+    margin: 9px 0;
 }
+
 .menu_item .hesablar div ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, .7);
@@ -420,12 +443,14 @@ body {
     transition: all .5s ease;
 }
 
-.menu_item .hesablar div h3 a:hover{
+.menu_item .hesablar div h3 a:hover {
     border-bottom: 1px solid white;
 }
+
 .menu_item .hesablar div ul li a:hover {
-    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
 }
+
 .fullWindow_item {
     position: absolute;
     right: 0;
@@ -433,6 +458,7 @@ body {
     height: 100vh;
     /*width: 1280px;*/
 }
+
 .fullWindow_item_lent {
     position: relative;
     transition: all 1.7s cubic-bezier(1, 0, 0, 1);
@@ -1137,11 +1163,217 @@ body {
     transform: rotate(180deg);
 }
 
-.commerce>div{
-  overflow: hidden;
+.commerce>div {
+    overflow: hidden;
 }
-.commerce>div div{
-  height: 30px;
-  position: relative;
-  transition: all .3s cubic-bezier(1, 0, 0, 1);
+
+.commerce>div div {
+    height: 30px;
+    position: relative;
+    transition: all .3s cubic-bezier(1, 0, 0, 1);
+}
+
+@media screen and (max-width: 1280px) {
+    .commerce .buy .buy_lent>div span:first-child {
+        display: none;
+    }
+    .commerce .sell .sell_lent>div span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1245px) {
+    .internetBank span:first-child {
+        display: none;
+    }
+    #adil .header .bank .internetBank {
+        border: 2px solid rgba(255, 255, 255, .25);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        background: url('../images_adil/padlock.svg') center center no-repeat;
+        background-size: 14px;
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 2px;
+        transition: all .3s ease-out;
+        font-family: 'l', sans-serif;
+        font-size: .9em;
+    }
+    #adil .header .bank .internetBank:hover{
+        background: url('../images_adil/padlock.svg') center center no-repeat;
+        background-size: 14px;
+    }
+    #adil .header .bank {
+        align-items: center;
+    }
+    #adil .header .bank .commerce {
+        margin-top: 11px;
+        margin-right: -2px;
+    }
+    #adil .container .innerContainer {
+        top: 25px;
+    }
+}
+
+@media screen and (max-width: 1235px) {
+    #adil .footer .innerFooter .firstSecond .second {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1145px) {
+    #adil .header .logo ul li a {
+        font-size: 1.3em;
+    }
+    #adil .header .bank .contactOnline ul li a {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #adil .header .logo .logo {
+        width: 165px;
+    }
+    #adil .header .logo ul {
+        margin-left: -10px;
+    }
+}
+
+* {
+    transition: all .3s ease;
+}
+
+@media screen and (max-width:1060px) {
+    #adil .header {
+        padding: 30px 30px 40px 30px;
+    }
+    #adil .footer {
+        padding: 40px 30px 30px 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #adil .header .logo ul{
+        display: none;
+    }
+    #adil .header .contactOnline{
+        display: none;
+    }
+    #adil .header .bank .commerce{
+        display: none;
+    }
+    #adil .footer .innerFooter .firstSecond .first .upper{
+        display: none;
+    }
+    #adil .footer .innerFooter .firstSecond .first .lower .jis{
+        display: none;
+    }
+    #adil .container .innerLeftContainer{
+        display: none;
+    }
+    #adil .container .innerRightContainer{
+        display: none;
+    }
+    #adil .container .above{
+        width: 100%;
+    }
+    #adil .container .above .searcher{
+        width: 100%;
+    }
+    #adil .container .above .searcher .menu{
+        display: none;
+    }
+    #adil .container .above .searcher span{
+        font-size: 1em;
+    }
+    #adil .container .above .searcher .searchIcon{
+        background-size: 20px;
+        right: 0;
+        height: 80px;
+    }
+    #adil .container .above .searcher input{
+        border-bottom: 1px solid rgba(255,255,255,.25);
+        padding-bottom: 20px;
+        font-size: 1em;
+        width: 100%;
+    }
+    #adil .header .logo .logo {
+        width: 155px;
+    }
+    #adil .footer .innerFooter .third{
+        display: none;
+    }
+    #adil .container .below .payment:hover{
+        transform: scale(1);
+    }
+    #adil .container .below .slider{
+        width: 60%;
+        height: 170px;
+        border-radius: 10px;
+    }
+    #adil .container .below .payment{
+        width: 35%;
+        border-radius: 10px;
+        height: 170px;
+        margin-left: 15px;
+        background-size: 110px;
+    }
+    #adil .container .below_item{
+        padding: 10px;
+    }
+    #adil .container .below .payment div u {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        font-size: .9em;
+        opacity: 1;
+        font-weight: 800;
+    }
+    #adil .header .allMenu{
+        display: block;
+    }
+    #adil .header .internetBank{
+        left: -3px;
+        position: absolute;
+        top: 23px;
+    }
+    #adil .header .logo .logo {
+        top: 20px;
+        left: 42.3%;
+        right: 44%;
+        position: absolute;
+    }
+    #adil .container .innerContainer {
+        top: -20px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:560px) {
+    #adil .container .below .slider{
+        width: 100%;
+    }
+    #adil .container .below .payment{
+        display: none;
+    }
+}
+@media screen and (max-width:840px) {
+    #adil .container .below .payment{
+        left: 25px;
+    }
+}
+@media screen and (max-width:715px) {
+    #adil .container .below .payment{
+        left: 20px;
+    }
+    #adil .header .logo .logo {
+        left: 35%;
+        right: 45%;
+    }
+}
+@media screen and (max-width:590px) {
+    #adil .container .below .payment{
+        left: 15px;
+    }
 }

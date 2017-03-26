@@ -15,7 +15,7 @@ l = document.querySelector('#adil .menu .l');
 })();
 function deactive() {
   if (input.value.length == 0) {
-    searchPlaceholder.style.fontSize = '1.8em';
+    searchPlaceholder.style.fontSize = '1em';
     searchPlaceholder.style.top = '0';
     middle.style.display = 'none';
   }
@@ -183,7 +183,7 @@ contact_btn.addEventListener("click",function () {
   setTimeout(function(){
       main_body.classList.add("main_body_active");
       setTimeout(function(){
-          contactUs.style.right="0";
+          contactUs.style.right="0px";
         }, 200);
     }, 100);
 })
@@ -197,7 +197,7 @@ curtain.addEventListener("click",delete_x)
 
 function delete_x() {
   setTimeout(function(){
-      contactUs.style.right=-usBg + "px";
+      contactUs.style.right=-(contactUs.clientWidth+300)+"px";
       setTimeout(function(){
           main_body.classList.remove("main_body_active");
         }, 200);
@@ -254,7 +254,7 @@ close_x_second.addEventListener("click",delete_x_second);
 
 function delete_x_second() {
   setTimeout(function(){
-      menuItem.style.right=-(menuItem.clientWidth+50)+"px";
+      menuItem.style.right=-(menuItem.clientWidth+300)+"px";
       setTimeout(function(){
            main_body.classList.remove("main_body_active");
         }, 200);
