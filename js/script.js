@@ -231,7 +231,6 @@ function currency_auto() {
       plus=-30;
     }
     plus+=30;
-    console.log(plus);
 }
 setInterval(currency_auto,3000);
 
@@ -255,6 +254,8 @@ close_menu.addEventListener("click",function() {
 //RAHİM'S SCRIPT STARTED
 var adile=document.querySelector("#adil");
 var menuItem=document.querySelector(".menu_item");
+var main_width=adile.clientWidth;
+menuItem.style.right=-(main_width)+"px";
 var menu=document.querySelector(".menu");
 var close_x_second=document.querySelector('.close_x_second');
 menu.addEventListener("click",function(){

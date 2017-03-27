@@ -256,7 +256,6 @@ body {
 }
 
 .menu_item {
-    right: -950px;
     position: absolute;
     width: 750px;
     z-index: 500;
@@ -458,7 +457,6 @@ body {
     right: 0;
     overflow: hidden;
     height: 100vh;
-    /*width: 1280px;*/
 }
 
 .fullWindow_item_lent {
@@ -1099,7 +1097,6 @@ body {
 
 .contactUs .usWrite form .firstf input::placeholder {
     color: rgba(255, 255, 255, .5) !important;
-    /*font-size: 1.35em;*/
 }
 
 .contactUs .usWrite form .secondf>p {
@@ -1175,10 +1172,10 @@ body {
     height: 30px;
     position: relative;
     transition: all .3s cubic-bezier(1, 0, 0, 1);
+    top: 0;
 }
 
 .menu_item_responsive {
-    right: 0;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -1251,7 +1248,6 @@ body {
 }
 
 .commerce_second>div div {
-    /*text-decoration: none;*/
     height: 30px;
     position: relative;
     transition: all .3s cubic-bezier(1, 0, 0, 1);
@@ -1392,7 +1388,7 @@ body {
 }
 
 * {
-    transition: all .3s ease;
+    transition: all .1s ease;
 }
 
 @media screen and (max-width:1060px) {
