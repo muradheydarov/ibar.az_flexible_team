@@ -69,7 +69,9 @@ var fullWindow_lent=document.querySelector('.fullWindow_item_lent');
 var innerContainer=document.querySelector('.innerContainer');
 var korporativ_content=document.querySelector('.korporativ_content');
 var height=document.getElementById('fullWindow_item_lent_first').clientHeight;
+var height_second=document.getElementById('fullWindow_item_lent_second').clientHeight;
 var ferdi = document.querySelector('.ferdi');
+
 ferdi.addEventListener("click",function() {
 setTimeout(function(){
   korporativ_content.style.opacity="0";
@@ -240,14 +242,14 @@ menu_item_responsive.style.right=-(menu_item_responsive.clientWidth)+"px";
 allmenu.addEventListener("click",function() {
   menu_item_responsive.style.opacity="1";
   menu_item_responsive.style.right="0px";
-  menu_item_responsive.style.zIndex="500";
+  menu_item_responsive.style.zIndex="500"
 })
 
 var close_menu=document.querySelector('.menu_item_responsive_close');
 close_menu.addEventListener("click",function() {
   menu_item_responsive.style.opacity="0";
   menu_item_responsive.style.right=-(menu_item_responsive.clientWidth)+"px";
-  menu_item_responsive.style.zIndex="0";
+  menu_item_responsive.style.zIndex="0"
 })
 
 //RAHİM'S SCRIPT STARTED
